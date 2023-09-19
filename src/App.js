@@ -11,8 +11,8 @@ import ViewKanbanIcon from '@mui/icons-material/ViewKanban';
 
 function App() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box style={{ height: "100vh" }} sx={{ flexGrow: 1 }}>
+      <AppBar position="fixed">
         <Toolbar>
           <Button color="inherit">Home</Button>
           <Button color="inherit">About</Button>
@@ -34,6 +34,9 @@ function App() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover", height: "100vh" }} sx={{ flexGrow: 1 }}>
+        Hello World
+      </Box>
     </Box>
   );
 }
