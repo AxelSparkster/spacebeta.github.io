@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createTheme, Theme, ThemeProvider } from '@mui/material/styles';
-
-import { green, orange } from '@mui/material/colors';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const outerTheme = createTheme({
   palette: {
