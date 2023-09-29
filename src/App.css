@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-html, body, #root, #reactapp, .App {
+html, body, #root, #reactapp, #Layout, .App {
   height: 100vh;
 }
 

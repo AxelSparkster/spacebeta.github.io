@@ -33,35 +33,37 @@ export default App;
 
 function Layout(){
   return(
-    <div>
-      <AppBar>
-        <Toolbar position="fixed">
-          <Button component={Link} to="/" color="inherit">Home</Button>
-          <Button component={Link} to="/about" color="inherit">About</Button>
-          <Button component={Link} to="/social" color="inherit">Social</Button>
+    <div id="Layout">
+      <Box sx={{ height: "100vh", display: 'flex', flexDirection: 'column'}}>
+        <AppBar>
+          <Toolbar position="fixed">
+            <Button component={Link} to="/" color="inherit">Home</Button>
+            <Button component={Link} to="/about" color="inherit">About</Button>
+            <Button component={Link} to="/social" color="inherit">Social</Button>
 
-          <Box sx={{ flexGrow: 1 }} />
-          <div sx={{ marginRight: 1 }}>Version: {packageJson.version}</div> 
-          <IconButton href="https://blog.shootinginto.space/" color="inherit" aria-label="menu">
-            <BookIcon />
-          </IconButton>
-          <IconButton href="https://twitter.com/AxelSparkster" color="inherit" aria-label="menu">
-            <TwitterIcon />
-          </IconButton>
-          <IconButton href="https://github.com/AxelSparkster" color="inherit" aria-label="menu">
-            <GitHubIcon />
-          </IconButton>
-          <IconButton href="https://trello.com/b/CtYfAAPA/shootingintospace" color="inherit" aria-label="menu">
-            <ViewKanbanIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <Toolbar />
-      <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
-        <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover"}} 
-        sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1, alignItems: 'stretch',
-        alignContent: 'center', justifyContent: 'center'}}>
-          <Outlet/>
+            <Box sx={{ flexGrow: 1 }} />
+            <div sx={{ marginRight: 1 }}>Version: {packageJson.version}</div> 
+            <IconButton href="https://blog.shootinginto.space/" color="inherit" aria-label="menu">
+              <BookIcon />
+            </IconButton>
+            <IconButton href="https://twitter.com/AxelSparkster" color="inherit" aria-label="menu">
+              <TwitterIcon />
+            </IconButton>
+            <IconButton href="https://github.com/AxelSparkster" color="inherit" aria-label="menu">
+              <GitHubIcon />
+            </IconButton>
+            <IconButton href="https://trello.com/b/CtYfAAPA/shootingintospace" color="inherit" aria-label="menu">
+              <ViewKanbanIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <Toolbar />
+        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, flexBasis: 0 }}>
+          <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover"}} 
+          sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1, alignItems: 'stretch',
+          alignContent: 'center', justifyContent: 'center'}}>
+            <Outlet/>
+          </Box>
         </Box>
       </Box>
     </div>
@@ -70,7 +72,8 @@ function Layout(){
 
 function Home(){
   return (
-    <Card sx={{ m: 1, minWidth: 500, maxWidth: 'sm' }}>
+    <Card sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',
+     m: 1, minWidth: 500, maxWidth: 'sm'}}>
       <CardContent>
         home
       </CardContent>
@@ -79,7 +82,8 @@ function Home(){
 }
 function About(){
   return (
-    <Card sx={{ m: 1, minWidth: 500, maxWidth: 'sm' }}>
+    <Card sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',
+     m: 1, minWidth: 500, maxWidth: 'sm'}}>
       <CardContent>
         about
       </CardContent>
@@ -88,7 +92,8 @@ function About(){
 }
 function Social(){
   return (
-    <Card sx={{ m: 1, minWidth: 500, maxWidth: 'sm' }}>
+    <Card sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',
+     m: 1, minWidth: 500, maxWidth: 'sm'}}>
       <CardContent>
         social
       </CardContent>
