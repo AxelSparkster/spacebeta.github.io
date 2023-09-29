@@ -13,9 +13,9 @@ import CardContent from '@mui/material/CardContent';
 
 function App() {
   return (
-    <Box style={{ height: "100vh" }} sx={{ flexGrow: 1 }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
       <AppBar>
-        <Toolbar position="sticky">
+        <Toolbar position="fixed">
           <Button color="inherit">Home</Button>
           <Button color="inherit">About</Button>
           <Button color="inherit">Social</Button>
@@ -37,9 +37,10 @@ function App() {
         </Toolbar>
       </AppBar>
       <Toolbar/>
-      <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover",
-      height: "100vh"}} sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Card sx={{ maxWidth: 275 }}>
+      <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover"}} 
+      sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1, alignItems: 'stretch',
+      alignContent: 'center', justifyContent: 'center'}}>
+        <Card sx={{ m: 1, maxWidth: 'sm' }}>
           <CardContent>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </CardContent>
