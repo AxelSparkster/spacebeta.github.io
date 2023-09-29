@@ -11,6 +11,7 @@ import ViewKanbanIcon from '@mui/icons-material/ViewKanban';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { BrowserRouter as Router, Link, Routes, Route, Outlet} from 'react-router-dom';
+import packageJson from '../package.json' // TODO: hide later somehow
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function Layout(){
           <Button component={Link} to="/social" color="inherit">Social</Button>
 
           <Box sx={{ flexGrow: 1 }} />
-
+          <div sx={{ marginRight: 1 }}>Version: {packageJson.version}</div> 
           <IconButton href="https://blog.shootinginto.space/" color="inherit" aria-label="menu">
             <BookIcon />
           </IconButton>
