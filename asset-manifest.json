@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spacebeta.github.io/static/css/main.980eb523.css",
+    "main.js": "/spacebeta.github.io/static/js/main.d0bb38a0.js",
+    "static/js/787.6c9dca54.chunk.js": "/spacebeta.github.io/static/js/787.6c9dca54.chunk.js",
+    "index.html": "/spacebeta.github.io/index.html",
+    "main.980eb523.css.map": "/spacebeta.github.io/static/css/main.980eb523.css.map",
+    "main.d0bb38a0.js.map": "/spacebeta.github.io/static/js/main.d0bb38a0.js.map",
+    "787.6c9dca54.chunk.js.map": "/spacebeta.github.io/static/js/787.6c9dca54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.980eb523.css",
+    "static/js/main.d0bb38a0.js"
+  ]
+}
