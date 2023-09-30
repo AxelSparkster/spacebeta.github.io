@@ -12,6 +12,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { BrowserRouter as Router, Link, Routes, Route, Outlet} from 'react-router-dom';
 import packageJson from '../package.json' // TODO: hide later somehow
+import ring from './ring.svg';
+import star from './star.svg';
 
 function App() {
   return (
@@ -72,12 +74,10 @@ function Layout(){
 
 function Home(){
   return (
-    <Card sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',
-     m: 1, minWidth: 500, maxWidth: 'sm'}}>
-      <CardContent>
-        home
-      </CardContent>
-    </Card>
+    <div class="starcircle">
+      <img src={ring} className="App-logo ring" />
+      <img src={star} className="App-logo star" />
+    </div>
   );
 }
 function About(){
