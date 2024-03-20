@@ -2,8 +2,15 @@
   text-align: center;
 }
 
-html, body, #root, #reactapp, #Layout, .App {
+html, body, #root, #reactapp, #Layout, .App .loading {
   height: 100vh;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -15,6 +22,15 @@ html, body, #root, #reactapp, #Layout, .App {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.logo-black {
+  fill: black;
+  color: black;
+}
+
+.logo-white {
+  filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(270deg) brightness(110%) contrast(101%);
 }
 
 .star {
