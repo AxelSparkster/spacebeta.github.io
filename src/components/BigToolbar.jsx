@@ -15,9 +15,9 @@ export default function BigToolbar(){
         <Button component={Link} to="/" color="inherit">Home</Button>
         <Button component={Link} to="/about" color="inherit">About</Button>
         <Button component={Link} to="/social" color="inherit">Social</Button>
-  
+        
         <Box sx={{ flexGrow: 1 }} />
-        <div sx={{ marginRight: 1 }}>Version: {packageJson.version}</div> 
+        <div style={{ marginRight: 5 }}>Version: {packageJson.version}</div> {/* TODO: hide the version better to not expose package.json? */}
         <IconButton href="https://test-blog.axelsparkster.gg/" color="inherit" aria-label="menu">
           <BookIcon />
         </IconButton>
