@@ -7,7 +7,7 @@ import BigToolbar from './BigToolbar';
 import {Outlet} from 'react-router-dom';
 
 export default function Layout(){
-  localStorage.setItem('visited', 1); // Makes initial fade in only happen once
+  localStorage.setItem('visited', 1); // Note: This makes the initial fade-in happen only once.
   return(
     <div id="Layout">
       <Box sx={{ height: "100vh", display: 'flex', flexDirection: 'column'}}>
