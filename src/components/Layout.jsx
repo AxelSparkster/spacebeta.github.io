@@ -1,6 +1,5 @@
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import {AppBar, Box, Toolbar, } from '@mui/material';
+import { Container } from '@mui/system';
 import MediaQuery from 'react-responsive';
 import SmallToolbar from './SmallToolbar';
 import BigToolbar from './BigToolbar';
@@ -20,12 +19,11 @@ export default function Layout(){
           </MediaQuery>
         </AppBar>
         <Toolbar />
-        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, flexBasis: 0 }}>
-          <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover"}} 
-          sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1, alignItems: 'stretch',
-          alignContent: 'center', justifyContent: 'center'}}>
+        <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover"}}
+         sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1}}>
+          <Container sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center'}}>
             <Outlet/>
-          </Box>
+          </Container>
         </Box>
       </Box>
     </div>
