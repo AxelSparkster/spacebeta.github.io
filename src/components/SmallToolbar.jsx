@@ -27,78 +27,81 @@ export default function SmallToolbar(){
     };
   
     return(
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          aria-controls={open ? 'basic-menu' : undefined}
-          aria-label="menu"
-          aria-expanded={open ? 'true' : undefined}
-          onClick={handleClick}>
-          <MenuIcon />
-        </IconButton>
-        <Menu
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        PaperProps={{ sx: {width: '250px'}}}> {/* TODO: use non-deprecated property */}
-          <MenuItem component={Link} to="/">
-            <ListItemText>Home</ListItemText>
-          </MenuItem>
-          <MenuItem component={Link} to="/about">
-            <ListItemText>About</ListItemText>
-          </MenuItem>
-          <MenuItem component={Link} to="/social">
-            <ListItemText>Social</ListItemText>
-          </MenuItem>
-  
-          <MenuItem
-            linkbutton="true"
-            href="https://test-blog.axelsparkster.gg/"
-            target="_blank"
-            component="a"
-            onClick={handleClose}>
-            <ListItemIcon>
-              <BookIcon />
-            </ListItemIcon>
-            <ListItemText>Blog</ListItemText>
-          </MenuItem>
-          <MenuItem
-            linkbutton="true"
-            href="https://twitter.com/AxelSparkster"
-            target="_blank"
-            component="a"
-            onClick={handleClose}>
-            <ListItemIcon>
-              <TwitterIcon />
-            </ListItemIcon>
-            <ListItemText>Twitter</ListItemText>
-          </MenuItem>
-          <MenuItem
-            linkbutton="true"
-            href="https://github.com/AxelSparkster"
-            target="_blank"
-            component="a"
-            onClick={handleClose}>
-            <ListItemIcon>
-              <GitHubIcon />
-            </ListItemIcon>
-            <ListItemText>GitHub</ListItemText>
-          </MenuItem>
-          <MenuItem
-            linkbutton="true"
-            href="https://trello.com/b/CtYfAAPA/shootingintospace"
-            target="_blank"
-            component="a"
-            onClick={handleClose}>
-            <ListItemIcon>
-              <ViewKanbanIcon />
-            </ListItemIcon>
-            <ListItemText>Trello</ListItemText>
-          </MenuItem>
-          <Box sx={{ pl: 1, pr: 1 }}>
-            <Typography variant="subtitle2" align="right">Version: {packageJson.version}</Typography>
-          </Box> 
-        </Menu>
-      </Toolbar>
+        <Toolbar>
+            <IconButton
+                color="inherit"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-label="menu"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}>
+                <MenuIcon />
+            </IconButton>
+
+            <Menu
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            slotProps={{ paper: { sx: {width: '250px'}}}}>
+                <MenuItem component={Link} to="/">
+                    <ListItemText>Home</ListItemText>
+                </MenuItem>
+                <MenuItem component={Link} to="/about">
+                    <ListItemText>About</ListItemText>
+                </MenuItem>
+                <MenuItem component={Link} to="/social">
+                    <ListItemText>Social</ListItemText>
+                </MenuItem>
+        
+                {/* TODO: programmatically make these? */}
+                <MenuItem
+                    linkbutton="true"
+                    href="https://test-blog.axelsparkster.gg/"
+                    target="_blank"
+                    component="a"
+                    onClick={handleClose}>
+                    <ListItemIcon>
+                    <BookIcon />
+                    </ListItemIcon>
+                    <ListItemText>Blog</ListItemText>
+                </MenuItem>
+                <MenuItem
+                    linkbutton="true"
+                    href="https://twitter.com/AxelSparkster"
+                    target="_blank"
+                    component="a"
+                    onClick={handleClose}>
+                    <ListItemIcon>
+                    <TwitterIcon />
+                    </ListItemIcon>
+                    <ListItemText>Twitter</ListItemText>
+                </MenuItem>
+                <MenuItem
+                    linkbutton="true"
+                    href="https://github.com/AxelSparkster"
+                    target="_blank"
+                    component="a"
+                    onClick={handleClose}>
+                    <ListItemIcon>
+                    <GitHubIcon />
+                    </ListItemIcon>
+                    <ListItemText>GitHub</ListItemText>
+                </MenuItem>
+                <MenuItem
+                    linkbutton="true"
+                    href="https://trello.com/b/CtYfAAPA/shootingintospace"
+                    target="_blank"
+                    component="a"
+                    onClick={handleClose}>
+                    <ListItemIcon>
+                    <ViewKanbanIcon />
+                    </ListItemIcon>
+                    <ListItemText>Trello</ListItemText>
+                </MenuItem>
+
+                <Box sx={{ pl: 1, pr: 1 }}>
+                    <Typography style={{marginRight: 5}} variant="subtitle2" align="right">Version: {packageJson.version}</Typography> {/* TODO: hide the version better to not expose package.json? */}
+                </Box> 
+            </Menu>
+        </Toolbar>
     )
   }
