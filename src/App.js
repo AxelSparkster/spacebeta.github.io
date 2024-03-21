@@ -13,7 +13,7 @@ export default function App() {
     }, 1000);
   }, []);
 
-  var firstTime = localStorage.getItem('visited') === undefined;
+  var firstTime = localStorage.getItem('visited') == undefined;
   if (firstTime && loading) {
     return <Loading/>
   }
