@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import BookIcon from '@mui/icons-material/Book';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ViewKanbanIcon from '@mui/icons-material/ViewKanban';
+import { Toolbar, Button, Box, IconButton}  from '@mui/material';
+import { Twitter, GitHub, ViewKanban, Book } from '@mui/icons-material';
 import packageJson from '../../package.json' // TODO: hide later somehow
 
 export default function BigToolbar(){
@@ -19,16 +13,16 @@ export default function BigToolbar(){
         <Box sx={{ flexGrow: 1 }} />
         <div style={{ marginRight: 5 }}>Version: {packageJson.version}</div> {/* TODO: hide the version better to not expose package.json? */}
         <IconButton href="https://test-blog.axelsparkster.gg/" color="inherit" aria-label="menu">
-          <BookIcon />
+          <Book />
         </IconButton>
         <IconButton href="https://twitter.com/AxelSparkster" color="inherit" aria-label="menu">
-          <TwitterIcon />
+          <Twitter />
         </IconButton>
         <IconButton href="https://github.com/AxelSparkster" color="inherit" aria-label="menu">
-          <GitHubIcon />
+          <GitHub />
         </IconButton>
         <IconButton href="https://trello.com/b/CtYfAAPA/shootingintospace" color="inherit" aria-label="menu">
-          <ViewKanbanIcon />
+          <ViewKanban />
         </IconButton>
       </Toolbar>
     );

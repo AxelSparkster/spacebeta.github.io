@@ -1,19 +1,9 @@
-import { Link } from 'react-router-dom';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import BookIcon from '@mui/icons-material/Book';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ViewKanbanIcon from '@mui/icons-material/ViewKanban';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+
+import { Box, Toolbar, IconButton, ListItemText, ListItemIcon, MenuItem, Typography, Menu } from '@mui/material';
+import { Book, Twitter, GitHub, ViewKanban, Menu as MenuIcon } from '@mui/icons-material';
 import packageJson from '../../package.json' // TODO: hide later somehow
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Typography from '@mui/material/Typography';
 
 export default function SmallToolbar(){
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -60,7 +50,7 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <BookIcon />
+                    <Book />
                     </ListItemIcon>
                     <ListItemText>Blog</ListItemText>
                 </MenuItem>
@@ -71,7 +61,7 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <TwitterIcon />
+                    <Twitter />
                     </ListItemIcon>
                     <ListItemText>Twitter</ListItemText>
                 </MenuItem>
@@ -82,7 +72,7 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <GitHubIcon />
+                    <GitHub />
                     </ListItemIcon>
                     <ListItemText>GitHub</ListItemText>
                 </MenuItem>
@@ -93,7 +83,7 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <ViewKanbanIcon />
+                    <ViewKanban />
                     </ListItemIcon>
                     <ListItemText>Trello</ListItemText>
                 </MenuItem>

@@ -1,9 +1,9 @@
-import {AppBar, Box, Toolbar, } from '@mui/material';
+import { AppBar, Box, Toolbar } from '@mui/material';
 import { Container } from '@mui/system';
+import { Outlet } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import SmallToolbar from './SmallToolbar';
 import BigToolbar from './BigToolbar';
-import {Outlet} from 'react-router-dom';
 
 export default function Layout(){
   localStorage.setItem('visited', 1); // Note: This makes the initial fade-in happen only once.
