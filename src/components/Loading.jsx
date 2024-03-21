@@ -5,8 +5,8 @@ export default function Loading(){
     return (
         <div class="loader">
             <div class="black starcircle">
-                <img src={ring} className="App-logo ring" />
-                <img src={star} className="App-logo star" />
+                <img src={ring} alt="" className="App-logo ring" />
+                <img src={star} alt="" className="App-logo star" />
             </div>
         </div>
     );
