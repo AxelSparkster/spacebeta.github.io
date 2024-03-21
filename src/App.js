@@ -13,6 +13,7 @@ export default function App() {
     }, 1000);
   }, []);
 
+  // eslint-disable-next-line
   var firstTime = localStorage.getItem('visited') == undefined;
   if (firstTime && loading) {
     return <Loading/>
