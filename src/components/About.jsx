@@ -1,14 +1,15 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import { Card, CardContent, useMediaQuery, useTheme} from '@mui/material';
 
 export default function About(){
+    {/* TODO: make this into a component */}
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <div className="default-layout">
             <div>
-                {/* TODO: make this into a component */}
                 {/* TODO: put CSS styles into a file */}
                 <Card sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',
-                m: 1, minWidth: 400, maxWidth: 400, minHeight: 300, maxHeight: 400}}>
+                m: 1, minWidth: isMobile ? 350 : 500, maxWidth: isMobile ? '100%' : 'xl', minHeight: 300, maxHeight: 400}}>
                     <CardContent className="temp-card">
                         about
                     </CardContent>
