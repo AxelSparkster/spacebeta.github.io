@@ -2,15 +2,24 @@
   text-align: center;
 }
 
+.initial-load {
+  animation: fade-in 1s;
+}
+
 html, body, #root, #reactapp, #Layout, .App .loading {
   height: 100vh;
 }
 
-.loading {
+.loader {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.loader--hide {
+  opacity: 0;
 }
 
 .App-logo {
@@ -78,5 +87,14 @@ html, body, #root, #reactapp, #Layout, .App .loading {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
   }
 }
