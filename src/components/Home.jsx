@@ -4,8 +4,8 @@ import star from '../star.svg';
 export default function Home(){
     return (
       <div class="starcircle">
-        <img src={ring} className="logo-white App-logo ring" />
-        <img src={star} className="logo-white App-logo star" />
+        <img src={ring} alt="" className="logo-white App-logo ring" />
+        <img src={star} alt="" className="logo-white App-logo star" />
       </div>
     );
   }
