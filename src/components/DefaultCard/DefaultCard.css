@@ -1,0 +1,20 @@
+.card {
+    margin: 1;
+    min-height: 300px;
+    max-height: 400px;
+    @media (max-width: 480px) {
+        min-width: 350px;
+        max-width: 100%;
+    }
+    @media (max-width: 99999px) {
+        min-width: 500px;
+    }
+}
+
+.temp-card {
+    font-size: 5vh;
+    font-style: normal;
+    color: #282c34;
+    font-kerning: auto;
+    font-weight: 800;
+}

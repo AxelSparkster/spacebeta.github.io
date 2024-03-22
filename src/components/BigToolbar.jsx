@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Toolbar, Button, Box, IconButton}  from '@mui/material';
 import { Twitter, GitHub, ViewKanban, Book } from '@mui/icons-material';
-import packageJson from '../../package.json' // TODO: hide later somehow
+import { version } from '../version'
 
 export default function BigToolbar(){
     return (
@@ -11,7 +11,7 @@ export default function BigToolbar(){
         <Button component={Link} to="/social" color="inherit">Social</Button>
         
         <Box sx={{ flexGrow: 1 }} />
-        <div style={{ marginRight: 5 }}>Version: {packageJson.version}</div> {/* TODO: hide the version better to not expose package.json? */}
+        <div style={{ marginRight: 5 }}>Version: {version}</div> {/* TODO: hide the version better to not expose package.json? */}
         <IconButton href="https://test-blog.axelsparkster.gg/" color="inherit" aria-label="menu">
           <Book />
         </IconButton>

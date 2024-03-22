@@ -1,6 +1,6 @@
 import FadeIn from 'react-fade-in';
-import ring from '../ring.svg';
-import star from '../star.svg';
+import ring from '../../ring.svg';
+import star from '../../star.svg';
 
 export default function Home(){
     return (
