@@ -16,14 +16,6 @@ html, body, #root, #reactapp, #Layout, .App .loading {
   justify-content: center;
 }
 
-.temp-card {
-  font-size: 5vh;
-  font-style: normal;
-  color: #282c34;
-  font-kerning: auto;
-  font-weight: 800;
-}
-
 .loader {
   height: 100vh;
   display: flex;
