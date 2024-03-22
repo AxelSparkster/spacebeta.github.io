@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Box, Toolbar, IconButton, ListItemText, ListItemIcon, MenuItem, Typography, Menu } from '@mui/material';
 import { Book, Twitter, GitHub, ViewKanban, Menu as MenuIcon } from '@mui/icons-material';
-import packageJson from '../../package.json' // TODO: hide later somehow
+import { version } from '../version'
 
 export default function SmallToolbar(){
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -89,7 +89,7 @@ export default function SmallToolbar(){
                 </MenuItem>
 
                 <Box sx={{ pl: 1, pr: 1 }}>
-                    <Typography style={{marginRight: 5}} variant="subtitle2" align="right">Version: {packageJson.version}</Typography> {/* TODO: hide the version better to not expose package.json? */}
+                    <Typography style={{marginRight: 5}} variant="subtitle2" align="right">Version: {version}</Typography> {/* TODO: hide the version better to not expose package.json? */}
                 </Box> 
             </Menu>
         </Toolbar>
