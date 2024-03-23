@@ -9,6 +9,7 @@ export default function BigToolbar(){
         <Button component={Link} to="/" color="inherit">Home</Button>
         <Button component={Link} to="/about" color="inherit">About</Button>
         <Button component={Link} to="/social" color="inherit">Social</Button>
+        <Button component={Link} to="/possum" color="inherit">Possum</Button>
         
         <Box sx={{ flexGrow: 1 }} />
         <div style={{ marginRight: 5 }}>Version: {version}</div> {/* TODO: hide the version better to not expose package.json? */}
