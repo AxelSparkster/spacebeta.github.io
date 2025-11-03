@@ -41,9 +41,6 @@ export default function SmallToolbar(){
                 <MenuItem component={Link} to="/social">
                     <ListItemText>Social</ListItemText>
                 </MenuItem>
-                <MenuItem component={Link} to="/possum">
-                    <ListItemText>Possum</ListItemText>
-                </MenuItem>
         
                 {/* TODO: programmatically make these? */}
                 <MenuItem

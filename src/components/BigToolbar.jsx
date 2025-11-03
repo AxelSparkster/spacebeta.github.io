@@ -9,21 +9,20 @@ export default function BigToolbar(){
         <Button component={Link} to="/" color="inherit">Home</Button>
         <Button component={Link} to="/about" color="inherit">About</Button>
         <Button component={Link} to="/social" color="inherit">Social</Button>
-        <Button component={Link} to="/possum" color="inherit">Possum</Button>
         
         <Box sx={{ flexGrow: 1 }} />
         <div style={{ marginRight: 5 }}>Version: {version}</div> {/* TODO: hide the version better to not expose package.json? */}
         <IconButton href="https://test-blog.axelsparkster.gg/" color="inherit" aria-label="menu">
-          <Book />
+          <i class="fa-solid fa-blog"></i>
         </IconButton>
-        <IconButton href="https://twitter.com/AxelSparkster" color="inherit" aria-label="menu">
-          <Twitter />
+        <IconButton href="https://axelsparkster.gg" color="inherit" aria-label="menu">
+          <i class="fa-brands fa-bluesky"></i>
         </IconButton>
         <IconButton href="https://github.com/AxelSparkster" color="inherit" aria-label="menu">
-          <GitHub />
+          <i class="fa-brands fa-github"></i>
         </IconButton>
         <IconButton href="https://trello.com/b/CtYfAAPA/shootingintospace" color="inherit" aria-label="menu">
-          <ViewKanban />
+          <i class="fa-brands fa-trello"></i>
         </IconButton>
       </Toolbar>
     );
