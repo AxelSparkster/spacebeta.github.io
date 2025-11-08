@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Box, Toolbar, IconButton, ListItemText, ListItemIcon, MenuItem, Typography, Menu } from '@mui/material';
-import { Book, Twitter, GitHub, ViewKanban, Menu as MenuIcon } from '@mui/icons-material';
+import { Menu as MenuIcon } from '@mui/icons-material';
 import { version } from '../version'
 
 export default function SmallToolbar(){
@@ -50,20 +50,20 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <Book />
+                    <i class="fa-solid fa-blog"></i>
                     </ListItemIcon>
                     <ListItemText>Blog</ListItemText>
                 </MenuItem>
                 <MenuItem
                     linkbutton="true"
-                    href="https://twitter.com/AxelSparkster"
+                    href="https://axelsparkster.gg"
                     target="_blank"
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <Twitter />
+                    <i class="fa-brands fa-bluesky"></i>
                     </ListItemIcon>
-                    <ListItemText>Twitter</ListItemText>
+                    <ListItemText>Bluesky</ListItemText>
                 </MenuItem>
                 <MenuItem
                     linkbutton="true"
@@ -72,7 +72,7 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <GitHub />
+                    <i class="fa-brands fa-github"></i>
                     </ListItemIcon>
                     <ListItemText>GitHub</ListItemText>
                 </MenuItem>
@@ -83,7 +83,7 @@ export default function SmallToolbar(){
                     component="a"
                     onClick={handleClose}>
                     <ListItemIcon>
-                    <ViewKanban />
+                    <i class="fa-brands fa-trello"></i>
                     </ListItemIcon>
                     <ListItemText>Trello</ListItemText>
                 </MenuItem>

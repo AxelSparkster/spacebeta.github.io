@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Toolbar, Button, Box, IconButton}  from '@mui/material';
-import { Twitter, GitHub, ViewKanban, Book } from '@mui/icons-material';
 import { version } from '../version'
 
 export default function BigToolbar(){
