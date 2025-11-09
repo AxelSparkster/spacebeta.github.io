@@ -25,9 +25,10 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "genversion --es6 src/version.js && react-scripts start",
-    "build": "genversion --es6 src/version.js && react-scripts build",
+    "deploy": "gh-pages -d dist",
+    "start": "genversion --es6 src/version.js && vite",
+    "build": "genversion --es6 src/version.js && vite build",
+    "preview": "vite preview",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,6 +51,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0"
+    "@vitejs/plugin-react": "^4.7.0",
+    "gh-pages": "^6.0.0",
+    "vite": "^6.4.1"
   }
 }
