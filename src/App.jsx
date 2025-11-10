@@ -4,6 +4,7 @@ import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { router } from "./constants/router/router";
 import Loading from "./components/Loading/Loading";
+import '@tailwindplus/elements';
 
 export default function App() {
   const [loading, setLoading] = useState(true);

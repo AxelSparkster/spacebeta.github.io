@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite'
 
 // If you host on a custom domain or at root, set base: '/'
 // If you host on GitHub Pages under a repo name, set base: '/repo-name/'
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), 
+    tailwindcss()], 
   optimizeDeps: {
     esbuildOptions: {
       loader: { '.js': 'jsx' } // <<--- set here
