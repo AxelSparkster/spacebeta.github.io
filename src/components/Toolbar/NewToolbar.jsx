@@ -8,13 +8,13 @@ export default function NewToolbar(){
 
           <div>
             <Link to="/">
-              <button className="text-zinc-400 hover:bg-zinc-600 font-bold mx-1 my-2 py-2 px-4 rounded hover:cursor-pointer">Home</button>
+              <button className="text-zinc-400 hover:bg-zinc-600 font-bold my-2 py-2 px-4 rounded hover:cursor-pointer">Home</button>
             </Link>
             <Link to="/about">
-              <button className="text-zinc-400 hover:bg-zinc-600 font-bold mx-1 my-2 py-2 px-4 rounded hover:cursor-pointer">About</button>
+              <button className="text-zinc-400 hover:bg-zinc-600 font-bold my-2 py-2 px-4 rounded hover:cursor-pointer">About</button>
             </Link>
             <Link to="/social">
-              <button className="text-zinc-400 hover:bg-zinc-600 font-bold mx-1 my-2 py-2 px-4 rounded hover:cursor-pointer">Social</button>
+              <button className="text-zinc-400 hover:bg-zinc-600 font-bold my-2 py-2 px-4 rounded hover:cursor-pointer">Social</button>
             </Link>
           </div>
           
