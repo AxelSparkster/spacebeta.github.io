@@ -11,3 +11,11 @@ To update the version number for this project:
   ```powershell
   npm version major
   ```
+
+## Deploying to GitHub Pages
+To deploy the site:
+
+```powershell
+npm run build
+npm run deploy
+```
