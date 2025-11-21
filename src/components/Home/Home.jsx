@@ -12,8 +12,8 @@ export default function Home(){
 
     return (
         <div className={`starcircle transition-opacity duration-700 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
-            <img src={ring} alt="" className="logo-white App-logo ring" />
-            <img src={star} alt="" className="logo-white App-logo star" />
+            <img src={ring} alt="" className="logo-white App-logo ringelem" />
+            <img src={star} alt="" className="logo-white App-logo starelem" />
         </div>
     );
   }
