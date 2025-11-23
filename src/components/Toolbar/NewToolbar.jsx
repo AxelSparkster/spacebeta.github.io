@@ -6,10 +6,10 @@ export default function NewToolbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <nav className="flex items-center bg-zinc-800 min-h-[56px] relative">
+  <nav className="fixed top-0 left-0 w-full z-10 flex items-center bg-zinc-800 min-h-[56px] relative">
       <div className="flex flex-1 bg-zinc-800 items-center mx-1">
         {/* Hamburger button for mobile */}
-        <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div className="pl-2 absolute inset-y-0 left-0 flex items-center sm:hidden">
           <button
             type="button"
             onClick={() => setShowMobileMenu((v) => !v)}
@@ -22,7 +22,7 @@ export default function NewToolbar() {
         </div>
 
         {/* Desktop links */}
-        <div className="hidden sm:flex">``
+        <div className="hidden sm:flex">
           <Link to="/">
             <button className="text-zinc-400 hover:bg-zinc-600 font-bold mx-1 my-2 py-2 px-4 rounded hover:cursor-pointer">Home</button>
           </Link>
@@ -52,19 +52,19 @@ export default function NewToolbar() {
       </div>
 
       {/* Mobile menu */}
-      {showMobileMenu && (
-        <div className="absolute top-full left-0 w-full bg-zinc-900 sm:hidden z-50">
-          <Link to="/" onClick={() => setShowMobileMenu(false)}>
-            <div className="block px-4 py-2 text-zinc-200 hover:bg-zinc-700">Home</div>
-          </Link>
-          <Link to="/about" onClick={() => setShowMobileMenu(false)}>
-            <div className="block px-4 py-2 text-zinc-200 hover:bg-zinc-700">About</div>
-          </Link>
-          <Link to="/social" onClick={() => setShowMobileMenu(false)}>
-            <div className="block px-4 py-2 text-zinc-200 hover:bg-zinc-700">Social</div>
-          </Link>
-        </div>
-      )}
+      <div className={`absolute left-0 w-full bg-zinc-900 sm:hidden z-0 transition-all duration-300 overflow-hidden 
+        ${showMobileMenu ? "top-full max-h-60 opacity-100" : "top-10 max-h-0 opacity-0"}`}
+        style={{ pointerEvents: showMobileMenu ? 'auto' : 'none' }}>
+        <Link to="/" onClick={() => setShowMobileMenu(false)}>
+          <div className="block px-4 py-2 text-zinc-200 hover:bg-zinc-700">Home</div>
+        </Link>
+        <Link to="/about" onClick={() => setShowMobileMenu(false)}>
+          <div className="block px-4 py-2 text-zinc-200 hover:bg-zinc-700">About</div>
+        </Link>
+        <Link to="/social" onClick={() => setShowMobileMenu(false)}>
+          <div className="block px-4 py-2 text-zinc-200 hover:bg-zinc-700">Social</div>
+        </Link>
+      </div>
     </nav>
   );
 }

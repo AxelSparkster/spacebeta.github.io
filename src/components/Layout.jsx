@@ -10,7 +10,7 @@ export default function Layout(){
       <Box sx={{ height: "100vh", display: 'flex', flexDirection: 'column'}}>
         <NewToolbar/>
         <Box style={{ backgroundImage: "url(/img/bg1.jpg)", backgroundSize: "cover"}}
-         sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1}}>
+         sx={{ pt: '56px', display: 'flex', flexDirection: 'column', flexGrow: 1}}>
           <Container sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center'}}>
             <Outlet/>
           </Container>
